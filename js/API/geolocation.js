@@ -10,6 +10,7 @@ var geo = {
 		alert(err.code);
 	},
 	success: function(p){
+		alert("Latitud: "+p.coords.latitude);
 		geo.lat = p.coords.latitude;
 		geo.lng = p.coords.longitude;
 	}
