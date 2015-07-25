@@ -1,7 +1,6 @@
 var fn = {
 	init: function initialize() {
 		//Posición del mapa
-		geo.getPosition();
 		var latlng = new google.maps.LatLng(geo.lat, geo.lng);
 		var myOptions = {
 			zoom: 18,
@@ -17,7 +16,7 @@ var fn = {
 		});
 	},
 	ready: function(){
-		document.addEventListener("deviceready", fn.init, false);
+		document.addEventListener("deviceready", geo.getPosition, false);
 	}
 };
 $(fn.ready);
